@@ -1,60 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Publications</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-body {
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-.container {
-  width: 80%;
-  margin: auto;
-  padding: 20px;
-}
+    .container {
+      width: 100%;
+      margin: auto;
+      padding: 20px;
+    }
 
-#publication-list {
-  list-style: none;
-  padding: 0;
-}
+    #publication-list {
+      list-style: none;
+      padding: 0;
+    }
 
-#publication-list li {
-  background-color: #292929; /* eerie-black-2 */
-  padding: 20px;
-  margin-bottom: 20px;
-}
+    #publication-list li {
+      background-color: #292929; /* eerie-black-2 */
+      padding: 20px;
+      margin-bottom: 20px;
+    }
 
-#publication-list li strong {
-  font-weight: bold;
-}
+    #publication-list li strong {
+      font-weight: bold;
+      color: #ffcc00; /* bright yellow */
+    }
 
-#publication-list li .journal {
-  color: blue;
-}
+    #publication-list li .authors {
+      color: #66ff66; /* neon green */
+    }
 
-.year-header {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 20px;
-}
+    #publication-list li .journal {
+      color:#ffcc00; /* ocean blue */
+    }
 
-/* Responsive layout */
-@media only screen and (max-width: 600px) {
-  .container {
-    width: 100%;
-  }
-}
-</style>
+    #publication-list li .volume {
+      color: #ff6666; /* coral pink */
+    }
+
+    #publication-list li .year {
+      color: #ff9933; /* orange */
+    }
+
+    #publication-list li .publisher {
+      color: #cc99ff; /* lavender */
+    }
+
+    .year-header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    /* Responsive layout */
+    @media only screen and (max-width: 600px) {
+      .container {
+        width: 100%;
+      }
+    }
+  </style>
+
 </head>
-<body>
 
-<h1>Publications</h1>
+<body>
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>
+            <button class="navbar-link  active" data-nav-link>About</button>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="Publicatons.html" class="navbar-link" data-nav-link>
+            <button class="navbar-link" data-nav-link>Publication</button>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>CV</button>
+          </li>
+
+         
+
+     
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+
+
+            
+<h1 style="color: #ffcc00">Publications</h1>
 
 <div class="container">
   <ul id="publication-list">
@@ -374,9 +482,9 @@ body {
       // Extract information from the publication
       const titleMatch = publication.match(/title={([^}]*)}/);
       const authorMatch = publication.match(/author={([^}]*)}/);
-      const journalMatch = publication.match(/journal={([^}]*)}/);
       const volumeMatch = publication.match(/volume={([^}]*)}/);
       const publisherMatch = publication.match(/publisher={([^}]*)}/);
+      const journalMatch = publication.match(/journal={([^}]*)}/);
 
       if (titleMatch && authorMatch && journalMatch && volumeMatch && publisherMatch) {
         const title = titleMatch[1];
@@ -391,7 +499,7 @@ body {
 
         // Create list item for the publication
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<strong>${title}</strong><br>Authors: ${authors}<br>Journal: ${journal}<br>Volume: ${volume}<br>Year: ${year}<br>Publisher: ${publisher}`;
+        listItem.innerHTML = `<strong>${title}</strong><br>Authors: ${authors}<br>Volume: ${volume}<br>Publisher: ${publisher}<br>Journal: ${journal}`;
 
         // Append list item to the publication list
         publicationList.appendChild(listItem);
@@ -400,6 +508,11 @@ body {
   });
 
 </script>
+            
+      </article>
+
+</div>
 
 </body>
+
 </html>
