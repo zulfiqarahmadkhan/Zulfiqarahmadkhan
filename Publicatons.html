@@ -1,4 +1,70 @@
-@article{khan2020towards,
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications</title>
+<style>
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+#publication-list {
+  list-style: none;
+  padding: 0;
+}
+
+#publication-list li {
+  background-color: #292929; /* eerie-black-2 */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#publication-list li strong {
+  font-weight: bold;
+}
+
+#publication-list li .journal {
+  color: blue;
+}
+
+.year-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Responsive layout */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Publications</h1>
+
+<div class="container">
+  <ul id="publication-list">
+    <!-- Publications will be dynamically added here -->
+  </ul>
+</div>
+
+<script>
+  // Your text data containing publication information
+  const publicationsText = `/* @article{khan2020towards,
   title={Towards efficient electricity forecasting in residential and commercial buildings: A novel hybrid CNN with a LSTM-AE based framework},
   author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Ullah, Amin and Rho, Seungmin and Lee, Miyoung and Baik, Sung Wook},
   journal={Sensors},
@@ -271,4 +337,69 @@
   pages={104989},
   year={2024},
   publisher={Elsevier}
-}
+} */`;
+
+  // Split the text into individual publications
+  const publications = publicationsText.split('\n\n');
+
+  // Create a dictionary to store publications by year
+  const publicationsByYear = {};
+
+  // Iterate over each publication
+  publications.forEach(publication => {
+    // Extract year from each publication
+    const yearMatch = publication.match(/year={([^}]*)}/);
+    if (yearMatch) {
+      const year = parseInt(yearMatch[1]);
+      // Add publication to the respective year array in the dictionary
+      if (!publicationsByYear[year]) {
+        publicationsByYear[year] = [];
+      }
+      publicationsByYear[year].push(publication);
+    }
+  });
+
+  const publicationList = document.getElementById('publication-list');
+
+  // Iterate over publications by year and display them
+  Object.keys(publicationsByYear).sort((a, b) => b - a).forEach(year => {
+    // Create header for each year
+    const yearHeader = document.createElement('div');
+    yearHeader.classList.add('year-header');
+    yearHeader.textContent = year;
+    publicationList.appendChild(yearHeader);
+
+    // Iterate over publications for the current year
+    publicationsByYear[year].forEach(publication => {
+      // Extract information from the publication
+      const titleMatch = publication.match(/title={([^}]*)}/);
+      const authorMatch = publication.match(/author={([^}]*)}/);
+      const journalMatch = publication.match(/journal={([^}]*)}/);
+      const volumeMatch = publication.match(/volume={([^}]*)}/);
+      const publisherMatch = publication.match(/publisher={([^}]*)}/);
+
+      if (titleMatch && authorMatch && journalMatch && volumeMatch && publisherMatch) {
+        const title = titleMatch[1];
+        const authors = authorMatch[1].split(' and ').map(author => {
+          // Rearrange author names
+          const [lastName, firstName] = author.split(',').map(name => name.trim());
+          return `${firstName} ${lastName}`;
+        }).join(', ');
+        const journal = journalMatch[1];
+        const volume = volumeMatch[1];
+        const publisher = publisherMatch[1];
+
+        // Create list item for the publication
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>${title}</strong><br>Authors: ${authors}<br>Journal: ${journal}<br>Volume: ${volume}<br>Year: ${year}<br>Publisher: ${publisher}`;
+
+        // Append list item to the publication list
+        publicationList.appendChild(listItem);
+      }
+    });
+  });
+
+</script>
+
+</body>
+</html>
