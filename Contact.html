@@ -127,6 +127,20 @@
       </article>
     </div>
   </main>
-</body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('[data-form]');
+      const formInputs = form.querySelectorAll('[data-form-input]');
+      const formButton = form.querySelector('[data-form-btn]');
 
-</html>
+      function validateForm() {
+        const isValid = Array.from(formInputs).every(input => input.value.trim() !== '');
+        formButton.disabled = !isValid;
+      }
+
+      formInputs.forEach(input => {
+        input.addEventListener('input', function() {
+          validateForm();
+        });
+      });
+
