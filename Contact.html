@@ -88,7 +88,7 @@
           </li>
           <li class="navbar-item">
             <a href="Publicatons.html" class="navbar-link" data-nav-link>
-              <button class="navbar-link" data-nav-link>Publication</button>
+              <button class="navbar-link" data-nav-link>Publication1111111</button>
             </a>
           </li>
           <li class="navbar-item">
@@ -112,7 +112,7 @@
         </section>
         <section class="contact-form">
           <h3 class="h3 form-title">Contact Form</h3>
-          <form action="send-email.php" method="post" class="form" data-form>
+          <form action="https://formspree.io/f/your-form-endpoint" method="POST" class="form" data-form>
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
               <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
@@ -127,46 +127,6 @@
       </article>
     </div>
   </main>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.querySelector('[data-form]');
-      const formInputs = form.querySelectorAll('[data-form-input]');
-      const formButton = form.querySelector('[data-form-btn]');
-
-      function validateForm() {
-        const isValid = Array.from(formInputs).every(input => input.value.trim() !== '');
-        formButton.disabled = !isValid;
-      }
-
-      formInputs.forEach(input => {
-        input.addEventListener('input', function() {
-          validateForm();
-        });
-      });
-
-      form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-        fetch('send-email.php', {
-          method: 'POST',
-          body: formData
-        })
-        .then(response => {
-          if (response.ok) {
-            console.log('Email sent successfully');
-            form.reset();
-          } else {
-            console.error('Failed to send email');
-          }
-        })
-        .catch(error => {
-          console.error('Network error:', error);
-        });
-      });
-    });
-  </script>
 </body>
 
 </html>
