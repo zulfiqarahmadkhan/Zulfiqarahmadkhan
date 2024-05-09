@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      margin: auto;
+      padding: 20px;
+    }
+
+    #publication-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    #publication-list li {
+      background-color: #292929; /* eerie-black-2 */
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    #publication-list li strong {
+      font-weight: bold;
+      color: #c8e500; /* bright yellow */
+    }
+
+    #publication-list li .authors {
+      color: #66ff66; /* neon green */
+    }
+
+    #publication-list li .journal {
+      color:#ffcc00; /* ocean blue */
+    }
+
+    #publication-list li .volume {
+      color: #ff6666; /* coral pink */
+    }
+
+    #publication-list li .year {
+      color: #ff9933; /* orange */
+    }
+
+    #publication-list li .publisher {
+      color: #cc99ff; /* lavender */
+    }
+
+    .year-header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    /* Responsive layout */
+    @media only screen and (max-width: 600px) {
+      .container {
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>
+            <button class="navbar-link " data-nav-link>About</button>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="Publicatons.html" class="navbar-link" data-nav-link>
+            <button class="navbar-link active" data-nav-link>Publication</button>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+			<a href="CV.html" class="navbar-link" data-nav-link>
+            <button class="navbar-link" data-nav-link>CV</button>
+             </a> 
+          </li>
+
+         
+
+     
+
+          <li class="navbar-item">
+		  <a href="Contact.html" class="navbar-link" data-nav-link>
+            <button class="navbar-link" data-nav-link>Contact</button>
+			  </a> 
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+
+
+            
+<h2 class="h2 article-title" ; style="color: hsl(45, 100%, 72%);">Publications</h2>
+
+<div class="container">
+  <ul id="publication-list">
+    <!-- Publications will be dynamically added here -->
+  </ul>
+</div>
+
+<script>
+  // Your text data containing publication information
+  const publicationsText = `/* 
+  @article{khan2023trapezoid,
+  title={A Trapezoid Attention Mechanism for Power Generation and Consumption Forecasting},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Ullah, Waseem and Baik, Sung Wook},
+  journal={IEEE Transactions on Industrial Informatics},
+  year={2023},
+  publisher={IEEE}
+}
+  
+  @article{khan2020towards,
+  title={Towards efficient electricity forecasting in residential and commercial buildings: A novel hybrid CNN with a LSTM-AE based framework},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Ullah, Amin and Rho, Seungmin and Lee, Miyoung and Baik, Sung Wook},
+  journal={Sensors},
+  volume={20},
+  number={5},
+  pages={1399},
+  year={2020},
+  publisher={MDPI}
+}
+
+@article{sajjad2020novel,
+  title={A novel CNN-GRU-based hybrid approach for short-term residential load forecasting},
+  author={Sajjad, Muhammad and Khan, Zulfiqar Ahmad and Ullah, Amin and Hussain, Tanveer and Ullah, Waseem and Lee, Mi Young and Baik, Sung Wook},
+  journal={Ieee Access},
+  volume={8},
+  pages={143759--143768},
+  year={2020},
+  publisher={IEEE}
+}
+
+@article{khan2020electrical,
+  title={Electrical energy prediction in residential buildings for short-term horizons using hybrid deep learning strategy},
+  author={Khan, Zulfiqar Ahmad and Ullah, Amin and Ullah, Waseem and Rho, Seungmin and Lee, Miyoung and Baik, Sung Wook},
+  journal={Applied Sciences},
+  volume={10},
+  number={23},
+  pages={8634},
+  year={2020},
+  publisher={MDPI}
+}
+
+@inproceedings{khan2020adaptive,
+  title={An Adaptive Filtering Technique for Segmentation of Tuberculosis in Microscopic Images},
+  author={Khan, Zulfiqar Ahmad and Ullah, Waseem and Ullah, Amin and Rho, Seungmin and Lee, Mi Young and Baik, Sung Wook},
+  booktitle={Proceedings of the 4th International Conference on Natural Language Processing and Information Retrieval},
+  pages={184--187},
+  year={2020}
+}
+
+@article{ullah2021efficient,
+  title={An efficient anomaly recognition framework using an attention residual LSTM in surveillance videos},
+  author={Ullah, Waseem and Ullah, Amin and Hussain, Tanveer and Khan, Zulfiqar Ahmad and Baik, Sung Wook},
+  journal={Sensors},
+  volume={21},
+  number={8},
+  pages={2811},
+  year={2021},
+  publisher={MDPI}
+}
+
+@article{yar2021towards,
+  title={Towards smart home automation using IoT-enabled edge-computing paradigm},
+  author={Yar, Hikmat and Imran, Ali Shariq and Khan, Zulfiqar Ahmad and Sajjad, Muhammad and Kastrati, Zenun},
+  journal={Sensors},
+  volume={21},
+  number={14},
+  pages={4932},
+  year={2021},
+  publisher={MDPI}
+}
+
+@article{khan2021atrous,
+  title={Atrous convolutions and residual GRU based architecture for matching power demand with supply},
+  author={Khan, Samee Ullah and Haq, Ijaz Ul and Khan, Zulfiqar Ahmad and Khan, Noman and Lee, Mi Young and Baik, Sung Wook},
+  journal={Sensors},
+  volume={21},
+  number={21},
+  pages={7191},
+  year={2021},
+  publisher={MDPI}
+}
+
+@article{khan2022boosting,
+  title={Boosting energy harvesting via deep learning-based renewable power generation prediction},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Baik, Sung Wook},
+  journal={Journal of King Saud University-Science},
+  volume={34},
+  number={3},
+  pages={101815},
+  year={2022},
+  publisher={Elsevier}
+}
+
+@article{khanraspberry,
+  title={Raspberry Pi Based Elderly Fall Detection System},
+  author={Khan, Zulfiqar Ahmad and Yar, Hikmat and Nasir, Mansoor}
+}
+
+@article{khan2022efficient,
+  title={Efficient short-term electricity load forecasting for effective energy management},
+  author={Khan, Zulfiqar Ahmad and Ullah, Amin and Haq, Ijaz Ul and Hamdy, Mohamed and Mauro, Gerardo Maria and Muhammad, Khan and Hijji, Mohammad and Baik, Sung Wook},
+  journal={Sustainable Energy Technologies and Assessments},
+  volume={53},
+  pages={102337},
+  year={2022},
+  publisher={Elsevier}
+}
+
+@article{ullah2022intelligent,
+  title={Intelligent dual stream CNN and echo state network for anomaly detection},
+  author={Ullah, Waseem and Hussain, Tanveer and Khan, Zulfiqar Ahmad and Haroon, Umair and Baik, Sung Wook},
+  journal={Knowledge-Based Systems},
+  volume={253},
+  pages={109456},
+  year={2022},
+  publisher={Elsevier}
+}
+
+@article{khan2022towards,
+  title={Towards efficient and effective renewable energy prediction via deep learning},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Haq, Ijaz Ul and Ullah, Fath U Min and Baik, Sung Wook},
+  journal={Energy Reports},
+  volume={8},
+  pages={10230--10243},
+  year={2022},
+  publisher={Elsevier}
+}
+
+@article{khan2022randomly,
+  title={Randomly initialized CNN with densely connected stacked autoencoder for efficient fire detection},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Ullah, Fath U Min and Gupta, Suneet Kumar and Lee, Mi Young and Baik, Sung Wook},
+  journal={Engineering Applications of Artificial Intelligence},
+  volume={116},
+  pages={105403},
+  year={2022},
+  publisher={Pergamon}
+}
+
+@article{yar2022optimized,
+  title={Optimized dual fire attention network and medium-scale fire classification benchmark},
+  author={Yar, Hikmat and Hussain, Tanveer and Agarwal, Mohit and Khan, Zulfiqar Ahmad and Gupta, Suneet Kumar and Baik, Sung Wook},
+  journal={IEEE Transactions on Image Processing},
+  volume={31},
+  pages={6331--6343},
+  year={2022},
+  publisher={IEEE}
+}
+
+
+
+@article{khan2023dual,
+  title={Dual stream network with attention mechanism for photovoltaic power forecasting},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Baik, Sung Wook},
+  journal={Applied Energy},
+  volume={338},
+  pages={120916},
+  year={2023},
+  publisher={Elsevier}
+}
+
+@article{khan2023modelling,
+  title={Modelling electricity consumption during the COVID19 pandemic: datasets, models, results and a research agenda},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Ullah, Amin and Ullah, Waseem and Del Ser, Javier and Muhammad, Khan and Sajjad, Muhammad and Baik, Sung Wook},
+  journal={Energy and Buildings},
+  pages={113204},
+  year={2023},
+  publisher={Elsevier}
+}
+
+@article{khan2024deep,
+  title={Deep multi-scale pyramidal features network for supervised video summarization},
+  author={Khan, Habib and Hussain, Tanveer and Khan, Samee Ullah and Khan, Zulfiqar Ahmad and Baik, Sung Wook},
+  journal={Expert Systems with Applications},
+  volume={237},
+  pages={121288},
+  year={2024},
+  publisher={Pergamon}
+}
+
+@article{yar2023effective,
+  title={An Effective Attention-based CNN Model for Fire Detection in Adverse Weather Conditions},
+  author={Yar, Hikmat and Ullah, Waseem and Khan, Zulfiqar Ahmad and Baik, Sung Wook},
+  journal={ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume={206},
+  pages={335--346},
+  year={2023},
+  publisher={Elsevier}
+}
+
+@article{khan2024dspm,
+  title={DSPM: Dual sequence prediction model for efficient energy management in micro-grid},
+  author={Khan, Zulfiqar Ahmad and Khan, Shabbir Ahmad and Hussain, Tanveer and Baik, Sung Wook},
+  journal={Applied Energy},
+  volume={356},
+  pages={122339},
+  year={2024},
+  publisher={Elsevier}
+}
+
+
+
+@article{khanefficient,
+  title={An Efficient Method for Vehicle Detection in Aerial Scenes},
+  author={Khan, Habib and Kim, Min Jee and Khan, Zulfiqar Ahmad and Lee, Mi Young and Ullah, Waseem and Baik, Sung Wook}
+}
+
+
+
+@article{yar2023modified,
+  title={A modified YOLOv5 architecture for efficient fire detection in smart cities},
+  author={Yar, Hikmat and Khan, Zulfiqar Ahmad and Ullah, Fath U Min and Ullah, Waseem and Baik, Sung Wook},
+  journal={Expert Systems with Applications},
+  volume={231},
+  pages={120465},
+  year={2023},
+  publisher={Elsevier}
+}
+
+@article{ullah2023sequential,
+  title={Sequential attention mechanism for weakly supervised video anomaly detection},
+  author={Ullah, Waseem and Ullah, Fath U Min and Khan, Zulfiqar Ahmad and Baik, Sung Wook},
+  journal={Expert Systems with Applications},
+  volume={230},
+  pages={120599},
+  year={2023},
+  publisher={Pergamon}
+}
+
+@article{hussain2022hybrid,
+  title={A hybrid deep learning-based network for photovoltaic power forecasting},
+  author={Hussain, Altaf and Khan, Zulfiqar Ahmad and Hussain, Tanveer and Ullah, Fath U Min and Rho, Seungmin and Baik, Sung Wook and others},
+  journal={Complexity},
+  volume={2022},
+  year={2022},
+  publisher={Hindawi}
+}
+
+
+
+@article{yar2021vision,
+  title={Vision sensor-based real-time fire detection in resource-constrained IoT environments},
+  author={Yar, Hikmat and Hussain, Tanveer and Khan, Zulfiqar Ahmad and Koundal, Deepika and Lee, Mi Young and Baik, Sung Wook and others},
+  journal={Computational intelligence and neuroscience},
+  volume={2021},
+  year={2021},
+  publisher={Hindawi}
+}
+
+@article{yar2024efficient,
+  title={An efficient deep learning architecture for effective fire detection in smart surveillance},
+  author={Yar, Hikmat and Khan, Zulfiqar Ahmad and Rida, Imad and Ullah, Waseem and Kim, Min Je and Baik, Sung Wook},
+  journal={Image and Vision Computing},
+  volume={145},
+  pages={104989},
+  year={2024},
+  publisher={Elsevier}
+}
+
+@article{yar2024modified,
+  title={A modified vision transformer architecture with scratch learning capabilities for effective fire detection},
+  author={Yar, Hikmat and Khan, Zulfiqar Ahmad and Hussain, Tanveer and Baik, Sung Wook},
+  journal={Expert Systems with Applications},
+  pages={123935},
+  year={2024},
+  publisher={Elsevier}
+} */`;
+
+  // Split the text into individual publications
+  const publications = publicationsText.split('\n\n');
+
+  // Create a dictionary to store publications by year
+  const publicationsByYear = {};
+
+  // Iterate over each publication
+  publications.forEach(publication => {
+    // Extract year from each publication
+    const yearMatch = publication.match(/year={([^}]*)}/);
+    if (yearMatch) {
+      const year = parseInt(yearMatch[1]);
+      // Add publication to the respective year array in the dictionary
+      if (!publicationsByYear[year]) {
+        publicationsByYear[year] = [];
+      }
+      publicationsByYear[year].push(publication);
+    }
+  });
+
+  const publicationList = document.getElementById('publication-list');
+
+  // Iterate over publications by year and display them
+  Object.keys(publicationsByYear).sort((a, b) => b - a).forEach(year => {
+    // Create header for each year
+    const yearHeader = document.createElement('div');
+    yearHeader.classList.add('year-header');
+    yearHeader.textContent = year;
+    publicationList.appendChild(yearHeader);
+
+    // Iterate over publications for the current year
+    publicationsByYear[year].forEach(publication => {
+      // Extract information from the publication
+      const titleMatch = publication.match(/title={([^}]*)}/);
+      const authorMatch = publication.match(/author={([^}]*)}/);
+      const volumeMatch = publication.match(/volume={([^}]*)}/);
+      const publisherMatch = publication.match(/publisher={([^}]*)}/);
+      const journalMatch = publication.match(/journal={([^}]*)}/);
+
+      if (titleMatch && authorMatch && journalMatch && volumeMatch && publisherMatch) {
+        const title = titleMatch[1];
+        const authors = authorMatch[1].split(' and ').map(author => {
+          // Rearrange author names
+          const [lastName, firstName] = author.split(',').map(name => name.trim());
+          return `${firstName} ${lastName}`;
+        }).join(', ');
+        const journal = journalMatch[1];
+        const volume = volumeMatch[1];
+        const publisher = publisherMatch[1];
+
+        // Create list item for the publication
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>${title}</strong><br>Authors: ${authors}<br>Volume: ${volume}<br>Publisher: ${publisher}<br>Journal: ${journal}`;
+
+        // Append list item to the publication list
+        publicationList.appendChild(listItem);
+      }
+    });
+  });
+
+</script>
+            
+      </article>
+
+</div>
+
+</body>
+
+</html>
