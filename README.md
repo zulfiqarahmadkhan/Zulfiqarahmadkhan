@@ -77,3 +77,6 @@ The core styling is located in `assets/css/bento.css`.
 
 ## 📄 License
 This project is open-source. Feel free to use, modify, and distribute it for your own personal academic portfolio!
+
+---
+🌟 **Thanks for visiting my repository!** Whether you're here to collaborate or just fork this template, I appreciate your time.
