@@ -3,6 +3,7 @@ import re
 from scholarly import scholarly
 
 def clean_title(title):
+    if not title: return ''
     return re.sub(r'[^a-zA-Z0-9]', '', title).lower()
 
 def main():
@@ -24,16 +25,8 @@ def main():
     prefix = match.group(1)
     existing_bibtex = match.group(2)
     suffix = match.group(3)
-    
-    # Parse existing titles
-    existing_titles = []
-    title_pattern = re.compile(r'title={([^}]+)}')
-    for title_match in title_pattern.finditer(existing_bibtex):
-        existing_titles.append(clean_title(title_match.group(1)))
-        
-    print(f"Found {len(existing_titles)} existing publications.")
 
-    print(f"Fetching publications for author ID {scholar_id}...")
+    print(f"Fetching author ID {scholar_id}...")
     try:
         author = scholarly.search_author_id(scholar_id)
         author = scholarly.fill(author, sections=['publications', 'indices', 'counts'])
@@ -41,100 +34,115 @@ def main():
         print(f"Error fetching author: {e}")
         return
 
-    new_bibtex_entries = []
-    
+    # Build a dictionary of titles to citation counts from Google Scholar
+    live_citations = {}
     for pub in author.get('publications', []):
         title = pub.get('bib', {}).get('title', '')
-        if not title:
-            continue
+        if not title: continue
+        c_title = clean_title(title)
+        num_citations = pub.get('num_citations', 0)
+        live_citations[c_title] = num_citations
+
+    # 1. Update EXISTING entries with new citation counts
+    entries = existing_bibtex.split('\n\n')
+    updated_entries = []
+    existing_titles = []
+    
+    print("Updating citations for existing papers...")
+    for entry in entries:
+        if not entry.strip(): continue
+        
+        t_match = re.search(r'title=\{([^}]+)\}', entry, re.IGNORECASE)
+        if t_match:
+            title = t_match.group(1)
+            c_title = clean_title(title)
+            existing_titles.append(c_title)
+            
+            if c_title in live_citations:
+                real_cites = live_citations[c_title]
+                
+                # Check if citation_count exists
+                if re.search(r'citation_count=\{[^}]*\}', entry):
+                    entry = re.sub(r'citation_count=\{[^}]*\}', f'citation_count={{{real_cites}}}', entry)
+                else:
+                    # Safely inject at the end
+                    entry = re.sub(r'\}\s*$', f",\n  citation_count={{{real_cites}}}\n}}", entry)
+                    
+        updated_entries.append(entry)
+
+    # 2. Add NEW publications
+    new_bibtex_entries = []
+    for pub in author.get('publications', []):
+        title = pub.get('bib', {}).get('title', '')
+        if not title: continue
             
         if clean_title(title) not in existing_titles:
             print(f"New publication found: {title}")
             try:
-                # Fetch full details for the publication
+                # Fetch full details for the new publication ONLY
                 pub_filled = scholarly.fill(pub)
                 bib = pub_filled.get('bib', {})
                 
                 year = bib.get('pub_year', 'nodate')
                 if str(year).isdigit() and int(year) < 2020:
-                    print(f"Skipping older publication ({year}): {title}")
                     continue
                 
-                # Construct BibTeX entry
-                # Generate a simple cite key
                 author_names = bib.get('author', '').split(' and ')
                 first_author_last_name = author_names[0].split(',')[-1].strip().split(' ')[-1].lower() if author_names else 'unknown'
                 title_first_word = clean_title(title.split(' ')[0]) if title else 'notitle'
                 cite_key = f"{first_author_last_name}{year}{title_first_word}"
                 
-                entry_type = 'article' # Default to article
+                entry_type = 'article'
                 if 'journal' not in bib and 'booktitle' in bib:
                     entry_type = 'inproceedings'
                     
                 bib_lines = [f"@{entry_type}{{{cite_key},"]
                 for key, value in bib.items():
-                    # Map scholarly fields to bibtex if necessary
                     bib_key = key
-                    if key == 'pub_year':
-                        bib_key = 'year'
-                    if key == 'venue':
-                        bib_key = 'journal'
-                        
+                    if key == 'pub_year': bib_key = 'year'
+                    if key == 'venue': bib_key = 'journal'
                     bib_lines.append(f"  {bib_key}={{{value}}},")
                 
                 num_citations = pub_filled.get('num_citations', 0)
-                if num_citations:
-                    bib_lines.append(f"  citation_count={{{num_citations}}},")
-                
-                bib_lines[-1] = bib_lines[-1].rstrip(',') # Remove trailing comma from last item
+                bib_lines.append(f"  citation_count={{{num_citations}}}")
                 bib_lines.append("}")
                 
                 new_bibtex_entries.append('\n'.join(bib_lines))
-                
-                # Add to existing titles to prevent duplicates in the same run
                 existing_titles.append(clean_title(title))
                 
             except Exception as e:
                 print(f"Error processing publication '{title}': {e}")
                 
-    if new_bibtex_entries:
-        print(f"Adding {len(new_bibtex_entries)} new publications.")
-        new_bibtex_str = '\n\n'.join(new_bibtex_entries)
+    # Reassemble BibTeX
+    final_bibtex = '\n\n'.join(new_bibtex_entries + updated_entries)
+    updated_html = html_content[:match.start(2)] + final_bibtex + html_content[match.end(2):]
+    
+    with open(html_file_path, 'w', encoding='utf-8') as f:
+        f.write(updated_html)
         
-        # Prepend new entries to the existing ones
-        updated_bibtex = new_bibtex_str + '\n\n' + existing_bibtex
-        
-        # Replace in HTML
-        updated_html = html_content[:match.start(2)] + updated_bibtex + html_content[match.end(2):]
-        
-        with open(html_file_path, 'w', encoding='utf-8') as f:
-            f.write(updated_html)
-            
-        print("publications.html updated successfully.")
-    else:
-        print("No new publications found.")
+    print("publications.html updated successfully with ALL citations synced.")
 
-    # Update index.html with stats
+    # 3. Update index.html and publications.html with global stats
     try:
-        index_path = 'index.html'
-        with open(index_path, 'r', encoding='utf-8') as f:
-            index_content = f.read()
-            
         citations = author.get('citedby', 0)
         hindex = author.get('hindex', 0)
         i10index = author.get('i10index', 0)
         
         if citations or hindex or i10index:
-            # Replace the contents of the span tags
-            index_content = re.sub(r'(<span id="scholar-citations">)[^<]*(</span>)', rf'\g<1>{citations}\g<2>', index_content)
-            index_content = re.sub(r'(<span id="scholar-hindex">)[^<]*(</span>)', rf'\g<1>{hindex}\g<2>', index_content)
-            index_content = re.sub(r'(<span id="scholar-i10index">)[^<]*(</span>)', rf'\g<1>{i10index}\g<2>', index_content)
-            
-            with open(index_path, 'w', encoding='utf-8') as f:
-                f.write(index_content)
-            print(f"Updated index.html with Citations: {citations}, h-index: {hindex}, i10-index: {i10index}")
+            for filepath in ['publications.html']: # you mentioned it's on publications now!
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    file_content = f.read()
+                
+                # Replace data-target for the counter animations
+                file_content = re.sub(r'(id="scholar-citations" data-target=")[^"]*(")', rf'\g<1>{citations}\g<2>', file_content)
+                file_content = re.sub(r'(id="scholar-hindex" data-target=")[^"]*(")', rf'\g<1>{hindex}\g<2>', file_content)
+                file_content = re.sub(r'(id="scholar-i10index" data-target=")[^"]*(")', rf'\g<1>{i10index}\g<2>', file_content)
+                
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(file_content)
+            print(f"Updated global stats: Citations: {citations}, h-index: {hindex}, i10-index: {i10index}")
     except Exception as e:
-        print(f"Error updating index.html: {e}")
+        print(f"Error updating global stats: {e}")
 
 if __name__ == "__main__":
     main()
