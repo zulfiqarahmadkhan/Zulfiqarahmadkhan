@@ -64,6 +64,9 @@ To set this up for your own profile:
 *(Note: Google Scholar does not track Impact Factors or Quartiles. When the system automatically pulls a new paper, you simply need to open `publications.html` and type `rank={...}` and `impactfactor={...}` into that paper's BibTeX block to make the custom badges appear. The automation script will always safely preserve these manual badges!)*
 
 ### 4. Activating the Contact Form
+> [!WARNING]
+> **CRITICAL:** If you are forking or using this template, you MUST change the email address in `Contact.html`. Otherwise, any messages sent through your website's contact form will be emailed to the original author of this template!
+
 1. Open `Contact.html`.
 2. Locate the form action URL: `<form action="https://formsubmit.co/your-email@gmail.com" method="POST">`
 3. Replace the email address with your actual email.
