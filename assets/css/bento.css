@@ -65,7 +65,7 @@ body {
 
 /* Specific Grid Placements */
 .bento-hero { grid-column: span 2; grid-row: span 2; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-.bento-nav { grid-column: span 2; display: flex; justify-content: space-around; align-items: center; }
+.bento-nav { grid-column: span 2; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 10px; }
 .bento-stat { grid-column: span 1; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .bento-wide { grid-column: span 4; }
 .bento-tall { grid-column: span 2; grid-row: span 2; }
@@ -207,5 +207,9 @@ body {
   }
   .bento-hero, .bento-nav, .bento-wide, .bento-tall, .bento-half, .bento-stat {
     grid-column: span 1;
+  }
+  .nav-link {
+    font-size: 14px;
+    padding: 10px 15px;
   }
 }
