@@ -50,16 +50,18 @@ The Publications page is driven entirely by BibTeX. You do **not** need to manua
    ```
    The website will automatically read these fields and generate beautiful cyan badges on the page!
 
-### 3. Automating via Google Scholar
-If you want to automatically pull your new papers from Google Scholar:
+### 3. Fully Automated Google Scholar Sync
+This portfolio is equipped with a built-in GitHub Action that completely automates your publication updates. Every Sunday at midnight, it will seamlessly fetch your real-time data from Google Scholar.
 
-1. Ensure you have Python installed.
-2. Install the required package: `pip install scholarly`
-3. Open `update_publications.py` and change the `scholar_id` variable to your own Google Scholar ID.
-4. Run the script: `python update_publications.py`
-5. The script will find any *new* publications on your profile, fetch the citation count, format it as BibTeX, and inject it into `publications.html`. 
+To set this up for your own profile:
+1. Open `update_publications.py` and replace the `scholar_id` variable with your personal Google Scholar ID.
+2. Go to the "Actions" tab of your GitHub repository and ensure workflows are enabled.
+3. That's it! Every Sunday, the repository will automatically:
+   - Search for any newly published articles and inject them into your website.
+   - Fetch the latest live citation counts for *all* your individual papers and update them.
+   - Update your global H-index, i10-index, and total citation statistics.
 
-*(Note: Google Scholar does not track Impact Factors or Quartiles, so you will still need to manually type `rank={...}` and `impactfactor={...}` into the BibTeX block for newly added papers).*
+*(Note: Google Scholar does not track Impact Factors or Quartiles. When the system automatically pulls a new paper, you simply need to open `publications.html` and type `rank={...}` and `impactfactor={...}` into that paper's BibTeX block to make the custom badges appear. The automation script will always safely preserve these manual badges!)*
 
 ### 4. Activating the Contact Form
 1. Open `Contact.html`.
