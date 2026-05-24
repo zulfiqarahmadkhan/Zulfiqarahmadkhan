@@ -1,4 +1,7 @@
 /* bento.css */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 body {
   background: linear-gradient(-45deg, #020617, #0f172a, #1e1b4b, #064e3b, #0f172a);
   background-size: 400% 400%;
@@ -204,12 +207,21 @@ body {
 @media (max-width: 600px) {
   .bento-container {
     grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 15px;
   }
   .bento-hero, .bento-nav, .bento-wide, .bento-tall, .bento-half, .bento-stat {
     grid-column: span 1;
   }
+  .bento-nav {
+    gap: 5px;
+  }
   .nav-link {
-    font-size: 14px;
-    padding: 10px 15px;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  .avatar-huge {
+    width: 140px;
+    height: 140px;
   }
 }
