@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zulfiqar Ahmad Khan - Contact</title>
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bento.css">
+  <style>
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .form-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 12px;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .form-input:focus {
+      border-color: #00f2fe;
+    }
+    textarea.form-input {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .form-btn {
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      color: #000;
+      border: none;
+      padding: 15px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: opacity 0.3s, transform 0.2s;
+    }
+    .form-btn:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="bento-container">
+    
+    <!-- Hero / Profile -->
+    <div class="bento-item bento-hero delay-1">
+      <img src="./assets/images/profile.jpg" alt="Zulfiqar Ahmad Khan" class="avatar-huge">
+      <h1 class="bento-title">Zulfiqar Ahmad Khan</h1>
+      <p class="bento-subtitle">Postdoctoral Researcher (WASP), Umeå, Sweden</p>
+      
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/zulfiqar-ahmad-khan-0124501b9/"><img src="assets/images/Linkdinn .png" alt="LinkedIn"></a>
+        <a href="https://github.com/zulfiqarahmadkhan"><img src="assets/images/GitHub.png" alt="GitHub"></a>
+        <a href="https://scholar.google.com/citations?user=TmDD6z8AAAAJ&hl=en"><img src="assets/images/GoogleSchoular.png" alt="Google Scholar"></a>
+        <a href="https://www.researchgate.net/profile/Zulfiqar-Khan-11"><img src="assets/images/ResearchGate.png" alt="Research Gate"></a>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="bento-item bento-nav delay-2">
+      <a href="index.html" class="nav-link">About</a>
+      <a href="CV.html" class="nav-link">CV</a>
+      <a href="publications.html" class="nav-link">Publications</a>
+      <a href="Contact.html" class="nav-link active">Contact</a>
+    </div>
+
+    <!-- Map -->
+    <div class="bento-item bento-half delay-3">
+      <h2 class="bento-list-title" style="margin-bottom: 20px;">Location</h2>
+      <figure style="margin: 0; width: 100%; height: 350px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d146906.90483861274!2d20.170564619472393!3d63.818814761060665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x467c5a0ec7b80a2b%3A0x633512a14e91c781!2sUme%C3%A5%20University!5e0!3m2!1sen!2sse!4v1716301234567!5m2!1sen!2sse"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </figure>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="bento-item bento-wide delay-4">
+      <h2 class="bento-list-title" style="margin-bottom: 20px;">Get in Touch</h2>
+      <form action="https://formsubmit.co/mzulfiqar3797@gmail.com" method="POST" class="contact-form">
+        <input type="hidden" name="_subject" value="New contact from your website portfolio">
+        <input type="hidden" name="_next" value="https://zulfiqarahmadkhan.github.io/index.html">
+        <input type="text" name="name" class="form-input" placeholder="Full name" required>
+        <input type="email" name="email" class="form-input" placeholder="Email address" required>
+        <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+        <button class="form-btn" type="submit">
+          <span>Send Message</span>
+        </button>
+      </form>
+    </div>
+
+  </div>
+  <script src="./assets/js/bento.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zulfiqar Ahmad Khan - Publications</title>
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bento.css">
+  <style>
+    .year-header {
+        color: #00f2fe;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgba(0, 242, 254, 0.3);
+        padding-bottom: 5px;
+    }
+    #publication-list li {
+        background: rgba(255, 255, 255, 0.02);
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        border: 1px solid rgba(255,255,255,0.05);
+        color: #d4d4d8;
+        line-height: 1.6;
+        transition: transform 0.2s, background 0.3s;
+    }
+    #publication-list li:hover {
+        background: rgba(0, 242, 254, 0.05);
+        transform: translateY(-2px);
+    }
+    #publication-list li strong {
+        color: #fff;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bento-container">
+    
+    <!-- Hero / Profile -->
+    <div class="bento-item bento-hero delay-1">
+      <img src="./assets/images/profile.jpg" alt="Zulfiqar Ahmad Khan" class="avatar-huge">
+      <h1 class="bento-title">Zulfiqar Ahmad Khan</h1>
+      <p class="bento-subtitle">Postdoctoral Researcher (WASP), Ume&aring;, Sweden</p>
+      
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/zulfiqar-ahmad-khan-0124501b9/"><img src="assets/images/Linkdinn .png" alt="LinkedIn"></a>
+        <a href="https://github.com/zulfiqarahmadkhan"><img src="assets/images/GitHub.png" alt="GitHub"></a>
+        <a href="https://scholar.google.com/citations?user=TmDD6z8AAAAJ&hl=en"><img src="assets/images/GoogleSchoular.png" alt="Google Scholar"></a>
+        <a href="https://www.researchgate.net/profile/Zulfiqar-Khan-11"><img src="assets/images/ResearchGate.png" alt="Research Gate"></a>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="bento-item bento-nav delay-2">
+      <a href="index.html" class="nav-link">About</a>
+      <a href="CV.html" class="nav-link">CV</a>
+      <a href="publications.html" class="nav-link active">Publications</a>
+      <a href="Contact.html" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Scholar Stats (Fits under Nav) -->
+    <div class="bento-item bento-half delay-3" style="display: flex; justify-content: space-around; align-items: center;">
+      <div style="text-align: center;">
+        <p class="bento-stat-num"><span id="scholar-citations" data-target="3054">0</span></p>
+        <p class="bento-stat-label" style="font-size: 14px; opacity: 0.7;">Citations</p>
+      </div>
+      <div style="text-align: center;">
+        <p class="bento-stat-num"><span id="scholar-hindex" data-target="23">0</span></p>
+        <p class="bento-stat-label" style="font-size: 14px; opacity: 0.7;">h-index</p>
+      </div>
+      <div style="text-align: center;">
+        <p class="bento-stat-num"><span id="scholar-i10index" data-target="32">0</span></p>
+        <p class="bento-stat-label" style="font-size: 14px; opacity: 0.7;">i10-index</p>
+      </div>
+    </div>
+
+    <!-- Publications List -->
+    <div class="bento-item bento-wide delay-4">
+      <h2 class="bento-title" style="margin-bottom: 20px;">Publications</h2>
+      <ul id="publication-list" style="list-style: none; padding: 0;">
+        <!-- Publications dynamically added here -->
+      </ul>
+    </div>
+  </div>
+  <script src="./assets/js/bento.js"></script>
+  <script>
+  // Your text data containing publication information
+  const publicationsText = `/* 
+  @article{hussain2024tdsnet,
+  title={TDS-Net: Transformer enhanced dual-stream network for video Anomaly Detection},
+  year={2024},
+  citation={Expert Systems with Applications 256, 124846, 2024},
+  author={Adnan Hussain and Waseem Ullah and Noman Khan and Zulfiqar Ahmad Khan and Min Je Kim and Sung Wook Baik},
+  journal={Expert Systems with Applications},
+  volume={256},
+  pages={124846},
+  publisher={Pergamon},
+  abstract={Video anomaly detection is a critical research area, driven by the increasing reliance on surveillance systems to maintain public safety and security. The implementation of surveillance cameras in public spaces is driven by the specific goal of monitoring incidents involving theft, vandalism, traffic accidents, etc. However, the reliance on human oversight for anomaly detection introduces a susceptibility to errors, emphasizing the urgent need for the development of efficient algorithms capable of autonomously detecting anomalies in video footage. Furthermore, anomalous patterns within video data often have a complex background, unexpected events, variations in the scale of the objects, and anomalous appearances, which makes their detection challenging. Therefore we introduce a novel Dual Stream Transformer Network (TDS-Net) to address these challenges. TDS-Net concurrently extracts RGB and flow features …}
+,
+  rank={Q1},
+  impactfactor={8.5},
+  citation_count={14}
+}
+
+@article{khan2025enhancing,
+  title={Enhancing real-time fire detection: An effective multi-attention network and a fire benchmark},
+  year={2025},
+  citation={Neural Computing and Applications 37 (18), 11693-11707, 2025},
+  author={Taimoor Khan and Zulfiqar Ahmad Khan and Chang Choi},
+  volume={37},
+  number={18},
+  pages={11693-11707},
+  publisher={Springer London},
+  abstract={Over the past decades, fire has been considered one of the most serious natural disasters because of its devastating nature, rapid spread, and high impact on the ecology, economy, environment, and life preservation. Therefore, early fire detection has immense significance in computer vision. However, existing methods suffer from high false prediction rates and slow inference times, which limit their real-time applicability. To bridge these gaps, this study introduces a multi-attention fire network (MAFire-Net) that integrates a modified ConvNeXtTiny (ConvNeXt-T) architecture with channel attention (CA) and spatial attention (SA) modules. These attention modules are integrated after each block of the ConvNeXt-T architecture where the CA module is responsible for capturing dominant channels within the features, leading to highly emphasized feature maps. The SA module enhances the spatial details, enabling the …}
+,
+  rank={Q1},
+  impactfactor={6.0},
+  citation_count={14}
+}
+
+@article{khan2025optimized,
+  title={Optimized cross-module attention network and medium-scale dataset for effective fire detection},
+  year={2025},
+  citation={Pattern Recognition 161, 111273, 2025},
+  author={Zulfiqar Ahmad Khan and Fath U Min Ullah and Hikmat Yar and Waseem Ullah and Noman Khan and Min Je Kim and Sung Wook Baik},
+  journal={Pattern Recognition},
+  volume={161},
+  pages={111273},
+  publisher={Pergamon},
+  abstract={Over a decade, computer vision has shown a keen interest toward vision-based fire detection due to its wide range of applications. Primarily, fire detection relies on color features that inspired recent deep models to achieve reasonable performance. However, a perfect balance between high fire detection rate and computational complexity over mainstream surveillance setups is a challenging task. To establish a better tradeoff between model complexity and fire detection rate, this article develops an efficient and effective Cross Module Attention Network (CANet) for fire detection. CANet is developed from scratch with a squeezing and expansive paths to focus on the fire regions and its location. Next, the channel attention and Multi-Scale Feature Selection (MSFS) modules are integrated to accomplish the most important channels, selectively emphasize the contributions of feature maps, and enhance the …}
+,
+  rank={Q1},
+  impactfactor={8.0},
+  citation_count={11}
+}
+
+@article{백성욱2021fire,
+  title={Fire detection via effective vision transformers},
+  year={2021},
+  citation={한국차세대컴퓨팅학회 논문지, 21-30, 2021},
+  author={후세인， 탄베르， 이미영， 백성욱},
+  journal={한국차세대컴퓨팅학회 논문지},
+  pages={21-30},
+  abstract={In today"s modern age, smart and safe cities are one of the major concerns of the research community. The cities are surrounded by open areas, agricultural land, and forests, where fire incidence can make human lives threatening, damaging their properties as well. Recently, vision sensors-based fire detection has attracted computer vision domain experts, where the leading performance is achieved by a variety of convolution neural networks (CNN) in the recent literature. However, these techniques are translation invariant, locality-sensitive, and lacking a global understanding of images. Furthermore, CNN-based models use the pooling layers strategy for dimensionality reduction to reduce the computational cost but it also loses a lot of meaningful information such as the precise location of the most active feature detector. To overcome these problems, in this work, we developed Vision Transformers (ViT) based …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={65}
+}
+
+@article{hussain2026classincremental,
+  title={Class-incremental learning network for real-time anomaly recognition in surveillance environments},
+  year={2026},
+  citation={Pattern Recognition 170, 112064, 2026},
+  author={Adnan Hussain and Waseem Ullah and Noman Khan and Zulfiqar Ahmad Khan and Hikmat Yar and Sung Wook Baik},
+  journal={Pattern Recognition},
+  volume={170},
+  pages={112064},
+  publisher={Pergamon},
+  abstract={The rise in crime rates has become a significant cause of property and life losses, necessitating the development of intelligent video surveillance systems for enhanced monitoring in law enforcement, transportation, and environmental contexts. However, the accurate identification of abnormal activities in real-time video surveillance systems remains a challenging task. Existing surveillance systems struggle with the vast amount of video streaming, making manual 24/7 monitoring impractical and error-prone. Traditional anomaly detection methods often process the entire dataset’s feature set, which can be limiting in complex scenarios, leading to incorrect predictions, especially with challenging patterns or inter-class similarities. Therefore, this paper addresses the limitations of automatic video anomaly recognition systems by developing a vision transformer-based class-incremental learning network (CILAR-Net). The …}
+,
+  rank={Q1},
+  impactfactor={8.0},
+  citation_count={11}
+}
+
+@article{muhammad2022weenet,
+  title={WEENet: an intelligent system for diagnosing COVID-19 and lung cancer in IoMT environments},
+  year={2022},
+  citation={Frontiers in oncology 11, 811355, 2022},
+  author={Khan Muhammad and Hayat Ullah and Zulfiqar Ahmad Khan and Abdul Khader Jilani Saudagar and Abdullah AlTameem and Mohammed AlKhathami and Muhammad Badruddin Khan and Mozaherul Hoque Abul Hasanat and Khalid Mahmood Malik and Mohammad Hijji and Muhammad Sajjad},
+  journal={Frontiers in oncology},
+  volume={11},
+  pages={811355},
+  publisher={Frontiers Media SA},
+  abstract={The coronavirus disease 2019 (COVID-19) pandemic has caused a major outbreak around the world with severe impact on health, human lives, and economy globally. One of the crucial steps in fighting COVID-19 is the ability to detect infected patients at early stages and put them under special care. Detecting COVID-19 from radiography images using computational medical imaging method is one of the fastest ways to diagnose the patients. However, early detection with significant results is a major challenge, given the limited available medical imaging data and conflicting performance metrics. Therefore, this work aims to develop a novel deep learning-based computationally efficient medical imaging framework for effective modeling and early diagnosis of COVID-19 from chest x-ray and computed tomography images. The proposed work presents “WEENet” by exploiting efficient convolutional neural network to extract high-level features, followed by classification mechanisms for COVID-19 diagnosis in medical image data. The performance of our method is evaluated on three benchmark medical chest x-ray and computed tomography image datasets using eight evaluation metrics including a novel strategy of cross-corpse evaluation as well as robustness evaluation, and the results are surpassing state-of-the-art methods. The outcome of this work can assist the epidemiologists and healthcare authorities in analyzing the infected medical chest x-ray and computed tomography images, management of the COVID-19 pandemic, bridging the early diagnosis, and treatment gap for Internet of Medical Things environments.}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={56}
+}
+
+@article{hussain2025edgeassisted,
+  title={Edge-assisted framework for instant anomaly detection and cloud-based anomaly recognition in smart surveillance},
+  year={2025},
+  citation={Engineering Applications of Artificial Intelligence 160, 111936, 2025},
+  author={Adnan Hussain and Noman Khan and Zulfiqar Ahmad Khan and Hikmat Yar and Sung Wook Baik},
+  journal={Engineering Applications of Artificial Intelligence},
+  volume={160},
+  pages={111936},
+  publisher={Pergamon},
+  abstract={Anomaly detection in surveillance systems, identifying events such as fighting, shooting, or vandalism, remains challenging due to limited anomalous occurrences impacting model generalization and accuracy. Additionally, the significant variability in anomalies compared to normal actions complicates precise detection. Current state-of-the-art methods typically process all frames captured by surveillance cameras using resource-intensive, centralized systems, resulting in high computational costs and network bandwidth usage unsuitable for real-time, edge-based Artificial Intelligence of Things environments. Moreover, unclear anomaly definitions and computationally demanding real-time analyses hinder effective monitoring. To address these challenges, we propose an efficient Artificial Intelligence of Things-based anomaly detection framework employing a two-phase approach. Initially, a lightweight neural …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={18}
+}
+
+@article{munsif2022pvanet,
+  title={Pv-anet: Attention-based network for short-term photovoltaic power forecasting},
+  year={2022},
+  citation={한국차세대컴퓨팅학회 학술대회, 133-135, 2022},
+  author={Muhammad Munsif and Habib Khan and Zulfiqar Ahmad Khan and Altaf Hussain and Fath U Min Ullah and Mi Young Lee and Sung Wook Baik},
+  journal={한국차세대컴퓨팅학회 학술대회},
+  pages={133-135},
+  abstract={Nowadays, renewable energy resources such as Photovoltaic (PV) is one of the convenient ways to integrate it into the distributed grid to fulfill the huge energy demands without burning costly and pollutant fossil fuels. Researchers have been contributing from various aspects to develop accurate PV-power forecasting methods however further improvements are needed for an effective power management system. Therefore, in this work, we propose an attention-based deep learning (DL) model (PV-ANet) for short-term PV-power forecasting. The proposed system mainly consists of three modules. First, data from an actual PV power plant is acquired and preprocessed to remove outliers and normalized for efficient processing. Next, the PV-ANet model is developed, which is consisting of an encoder and decoder modules. The encoder encodes the input attributes via stack conventional and attention layer. While the …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={20}
+}
+
+@article{yar2025efnetcsm,
+  title={EFNet-CSM: EfficientNet with a modified attention mechanism for effective fire detection},
+  year={2025},
+  citation={Knowledge-Based Systems, 114353, 2025},
+  author={Hikmat Yar and Fath U Min Ullah and Zulfiqar Ahmad Khan and Min Je Kim and Sung Wook Baik},
+  journal={Knowledge-Based Systems},
+  pages={114353},
+  publisher={Elsevier},
+  abstract={Fire is considered one of the major threats to life, property, ecosystems, global warming, and the economy. Recent advancements in convolution neural networks have shown potential for vision-based fire detection; however, several challenges are associated with these techniques, such as limited model performance and high computational complexity. To address these issues, we present an efficient CNN-based model in which EfficientNetV2B0 is employed as a backbone feature extractor and is integrated with a channel and modified spatial attention mechanism to extract deeper spatial details, thereby weighting important features appropriately. The spatial attention is modified by introducing two depth-separable convolution layers to control computational complexity without affecting the performance. The proposed model is assessed on four benchmark datasets in the domain of remote sensing and CCTV-based …}
+,
+  rank={Q1},
+  impactfactor={8.8},
+  citation_count={14}
+}
+
+@article{yar2026a,
+  title={A novel deep learning framework for battery performance prediction over the operational lifespan},
+  year={2026},
+  citation={Journal of Energy Storage 143, 119359, 2026},
+  author={Hikmat Yar and Zulfiqar Ahmad Khan and Adnan Hussain and Sang Il Yoon and Seoa Kim and Jungwook Choi and Chan Mi Jeon and Huisu Jeung and Kyungjung Kwon and Sung Wook Baik},
+  journal={Journal of Energy Storage},
+  volume={143},
+  pages={119359},
+  publisher={Elsevier},
+  abstract={Lithium-ion batteries are increasingly used in a diverse range of applications, such as electric vehicles, renewable energy storage, and portable electronics. However, accurate prediction of the state of health and capacity degradation remains a significant challenge, due to the complex and nonlinear nature of battery aging. State-of-the-art prediction models often lack robustness and reliability, especially under varying discharge current rates, and the scarcity of comprehensive data covering different discharge currents further hinders the development of accurate models. Although various machine learning methods have been proposed, they still fall short of delivering precise and consistent predictions across a diverse set of conditions. Furthermore, there is a lack of sufficient data to enable an exploration of battery capacity at different discharge current rates, which prevents the development of more robust and …}
+,
+  rank={Q1},
+  impactfactor={9.4},
+  citation_count={19}
+}
+
+@article{hussain2025dual,
+  title={Dual stream deep attention networks for annual population projection},
+  year={2025},
+  citation={Pattern Analysis and Applications 28 (2), 71, 2025},
+  author={Adnan Hussain and Hikmat Yar and Noman Khan and Zulfiqar Ahmad Khan and Min Je Kim and Sung Wook Baik},
+  journal={Pattern Analysis and Applications},
+  volume={28},
+  number={2},
+  pages={71},
+  publisher={Springer London},
+  abstract={Accurate population projections are essential for local and state governments planning and decision-making processes, as they directly influence the development of local infrastructure and services. Recent advancements in time series forecasting, particularly through machine learning applied to diverse social and economic factors, have improved predictive accuracy, enabling more informed decision-making at local and state levels. Therefore, researchers have explored various statistical, machine learning, and deep learning methods. However, these approaches often rely on standalone models or simple feature integration, which results need to be improved. Furthermore, the existing methods lack hybrid methods with attention mechanisms to effectively capture rich intricate features. To tackle these challenges, we designed a hybrid method, a dual-stream deep attention network namely Deep Population …}
+,
+  rank={Q2},
+  impactfactor={3.9},
+  citation_count={13}
+}
+
+@article{munsif2025hierarchical,
+  title={Hierarchical attention-based framework for enhanced prediction and optimization of organic and inorganic material synthesis},
+  year={2025},
+  citation={Advanced Engineering Informatics 67, 103462, 2025},
+  author={Muhammad Munsif and Altaf Hussain and Zulfiqar Ahmad Khan and Min Je Kim and Sung Wook Baik},
+  journal={Advanced Engineering Informatics},
+  volume={67},
+  pages={103462},
+  publisher={Elsevier},
+  abstract={Optimizing the synthesis of organic and inorganic materials, including molybdenum disulfide (MoS 2), and estimating the photoluminescent quantum yield (PLQY) remains a complex and time-intensive challenge with significant applications in high-impact areas such as energy storage, light-emitting devices, and light-filtering materials. Traditional machine learning approaches like XGBoost and support vector machines (SVMs) have shown effectiveness in predicting material properties; however, they often require manual feature engineering and are limited in capturing intricate dependencies across experimental parameters. To address these limitations, this study proposes a unified hierarchical attention transformer network (HATNet) that leverages the multi-head-attention (MHA) mechanism to automatically learn complex interactions within feature spaces, providing a more flexible and powerful alternative for …}
+,
+  rank={Q1},
+  impactfactor={8.0},
+  citation_count={15}
+}
+
+@article{khan2025correction,
+  title={Correction: Enhancing real-time fire detection: An effective multi-attention network and a fire benchmark},
+  year={2025},
+  citation={Neural Computing and Applications 37 (18), 11709-11709, 2025},
+  author={Taimoor Khan and Zulfiqar Ahmad Khan and Chang Choi},
+  journal={Neural Computing and Applications},
+  volume={37},
+  number={18},
+  pages={11709-11709},
+  publisher={Springer London},
+  abstract={Correction to: Neural Computing and Applications https://doi. org/10.1007/s00521-023-09298-y In Table 1 of this article, the number of samples representing the entry Yar [54] was incorrect and the corrected values should have appeared as shown below. In section 4.1 the sentence beginning ‘The dataset contained 107 fire...’in this article, the text ‘The dataset contained 107 fire and 119 nonfire samples’ should have read ‘The dataset contained 119 fire and 107 nonfire samples’.}
+,
+  rank={Q1},
+  impactfactor={6.0},
+  citation_count={13}
+}
+
+@article{ullah2024dual,
+  title={Dual Deep Learning Network for Abnormal Action Detection},
+  year={2024},
+  citation={2024 IEEE International Conference on Advanced Video and Signal Based …, 2024},
+  author={Fath U Min Ullah and Zulfiqar Ahmad Khan and Sung Wook Baik and Estefania Talavera and Saeed Anwar and Khan Muhammad},
+  conference={2024 IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS)},
+  pages={1-8},
+  publisher={IEEE},
+  abstract={Neural networks have demonstrated remarkable effectiveness in solving distinct real-world vision problems pertaining to activity recognition and violence detection in surveillance scenarios. The broad reliance on practicing a single network for spatial and motion information collection has made them less effective for long-term dependency analysis in video snippets. Our work solves this issue through a multi-network fusion strategy suitable for real-world surveillance. Initially, the spatial information is accessed from a compound coefficient strategy inspired by a robust convolutional neural network (ConvNet). Next, the pyramidal convolutional features from two consecutive frames are obtained through LiteFlowNet. The output from both the networks (ConvNet and LiteFlowNet) is separately passed into a deep-gated recurrent Unit (GRU) that is assembled for a skip connection. The latter obtained from each GRU is …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={32}
+}
+
+@article{yar2026deep,
+  title={Deep hybrid network with additive attention for accurate population forecasting},
+  year={2026},
+  citation={Soft Computing, 1-18, 2026},
+  author={Hikmat Yar and Adnan Hussain and Zulfiqar Ahmad Khan and Min Je Kim and Sung Wook Baik},
+  journal={Soft Computing},
+  pages={1-18},
+  publisher={Springer Berlin Heidelberg},
+  abstract={Population forecasting is crucial for informed decision-making and strategic planning in government and business, as it supports effective resource allocation, infrastructure development, and service provision to meet future demands. However, accurate population forecasting for small regions is challenging due to complex demographic processes, data sparsity, and the nonlinear nature of population growth. Despite advancements in time series forecasting methods, limited research has applied machine learning to small-area population forecasting, highlighting the need for models capable of capturing complex demographic trends to improve accuracy. To tackle these limitations, we propose a dual-stream architecture combining convolutional neural network (CNN) and bidirectional LSTM (BiLSTM) layers with additive attention mechanisms (Dual-CBA) for small-area population forecasting. The first stream utilizes …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={14}
+}
+
+@article{zaland2025catastrophic,
+  title={Catastrophic Forgetting Resilient One-Shot Incremental Federated Learning},
+  year={2025},
+  citation={2025 IEEE International Conference on Big Data (BigData), 3501-3509, 2025},
+  author={Obaidullah Zaland and Zulfiqar Ahmad Khan and Monowar Bhuyan},
+  conference={2025 IEEE International Conference on Big Data (BigData)},
+  pages={3501-3509},
+  publisher={IEEE},
+  abstract={Modern big-data systems generate massive, heterogeneous, and geographically dispersed streams that are large-scale and privacy-sensitive, making centralization challenging. While federated learning (FL) provides a privacy-enhancing training mechanism, it assumes a static data flow and learns a collaborative model over multiple rounds, making learning with incremental data challenging in limited-communication scenarios. This paper presents One-Shot Incremental Federated Learning (OSI-FL), the first FL framework that addresses the dual challenges of communication overhead and catastrophic forgetting. OSI-FL communicates category-specific embeddings, devised by a frozen vision-language model (VLM) from each client in a single communication round, which a pre-trained diffusion model at the server uses to synthesize new data similar to the client's data distribution. The synthesized samples are …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={13}
+}
+
+@article{ali2025avarnet,
+  title={AVAR-Net: A Lightweight Audio-Visual Anomaly Recognition Framework with a Benchmark Dataset},
+  year={2025},
+  citation={arXiv preprint arXiv:2510.13630, 2025},
+  author={Amjid Ali and Zulfiqar Ahmad Khan and Altaf Hussain and Muhammad Munsif and Adnan Hussain and Sung Wook Baik},
+  journal={arXiv preprint arXiv:2510.13630},
+  abstract={Anomaly recognition plays a vital role in surveillance, transportation, healthcare, and public safety. However, most existing approaches rely solely on visual data, making them unreliable under challenging conditions such as occlusion, low illumination, and adverse weather. Moreover, the absence of large-scale synchronized audio-visual datasets has hindered progress in multimodal anomaly recognition. To address these limitations, this study presents AVAR-Net, a lightweight and efficient audio-visual anomaly recognition framework designed for real-world environments. AVAR-Net consists of four main modules: an audio feature extractor, a video feature extractor, fusion strategy, and a sequential pattern learning network that models cross-modal relationships for anomaly recognition. Specifically, the Wav2Vec2 model extracts robust temporal features from raw audio, while MobileViT captures both local and global visual representations from video frames. An early fusion mechanism combines these modalities, and a Multi-Stage Temporal Convolutional Network (MTCN) model that learns long-range temporal dependencies within the fused representation, enabling robust spatiotemporal reasoning. A novel Visual-Audio Anomaly Recognition (VAAR) dataset, is also introduced, serving as a medium-scale benchmark containing 3,000 real-world videos with synchronized audio across ten diverse anomaly classes. Experimental evaluations demonstrate that AVAR-Net achieves 89.29% accuracy on VAAR and 88.56% Average Precision on the XD-Violence dataset, improving Average Precision by 2.8% over existing state-of-the-art methods. These …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={11}
+}
+
+@article{ali2024active,
+  title={Active Learning for Anomaly Recognition: Leveraging Visual and Audio Data Fusion},
+  year={2024},
+  citation={한국차세대컴퓨팅학회 학술대회, 102-104, 2024},
+  author={Amjid Ali and Noman Khan and Zulfiqar Ahmad Khan and Su Min Lee and Min Je Kim and Sung Wook Baik},
+  journal={한국차세대컴퓨팅학회 학술대회},
+  pages={102-104},
+  abstract={Recognizing anomalies in surveillance is crucial for public safety to identify events that deviate from normal patterns. Visual information is essential for effective anomaly recognition; however, audio data can enhance recognition accuracy by providing additional context. Despite this, existing systems only utilize visual information, overlooking the potential of audio modalities in anomaly recognition. This paper introduces a multi-modal framework for anomaly recognition through active learning, integrating audio and visual modalities to enhance anomaly prediction. The framework extracts features using a pretrained ResNet-50 convolutional neural network (CNN) model from the visual and audio data. The extracted features are then forwarded to the Bi-Directional Long Short-Term Memory (Bi-LSTM) network for temporal feature learning. These features are then fused and fed into a classification layer for final …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={20}
+}
+
+@article{hussain2024machine,
+  title={Machine Learning-Based Stability Prediction for Material Synthesis for Silicon Anodes in Multivalent Cation Batteries},
+  year={2024},
+  citation={한국차세대컴퓨팅학회 학술대회, 98-101, 2024},
+  author={Altaf Hussain and Muhammad Munsif and Zulfiqar Ahmad Khan and Su Min Lee and Min Je Kim and Sung Wook Baik},
+  journal={한국차세대컴퓨팅학회 학술대회},
+  pages={98-101},
+  abstract={Recent advancements in data-driven methodologies have brought significant attention to the computational prediction of material properties. Traditional machine learning (ML) approaches have struggled to achieve high accuracy due to the complex relationships between a material's structure and its properties. To address this challenge, in this work, we present an ML framework for predicting the stability of silicon (Si) and Si-based alkaline metal alloys with reduced error. This emphasizes the model transferability to discover new silicon alloys with diverse electronic configurations and structures. We explore the effectiveness of two atomic structural descriptors including X-ray diffraction (XRD) and sine coulomb matrix (SCM). The dynamic ensemble learning (DEL) model is trained and evaluated using 750 Si alloys from the materials project database (MPD) and optimized via ensemble learning. The results indicate …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={18}
+}
+
+@article{yar2024a,
+  title={A Modified Vision Transformer-based Anomaly Recognition using Audio Data},
+  year={2024},
+  citation={한국차세대컴퓨팅학회 학술대회, 337-340, 2024},
+  author={Hikmat Yar and Amjid Ali and Zulfiqar Ahmad Khan and Noman Khan and Min Je Kim and Su Min Lee and Sung Wook Baik},
+  journal={한국차세대컴퓨팅학회 학술대회},
+  pages={337-340},
+  abstract={In recent years, anomaly recognition using audio has attracted the attention of the research community, due to the increasing number of abnormal situations day by day. In the past, researchers have mainly focused on video-based anomaly recognition. However, occlusion is one of the most important factors due to which the anomalous object is unidentifiable. Therefore, in this paper, we proposed a modified vision transformer that utilized the Shifted Patch Tokenization (SPT), and Local Self-Attention (LSA) mechanism and reduced the number of multilayer perceptrons in the head, enabling the model to capture rich spatial information within the spectrogram of anomalous data. The proposed model is implemented using the Sound Events for Surveillance Applications (SESA) dataset and obtained 87% testing accuracy. Thus, the proposed model is an efficient and effective solution for audio-based anomaly recognition.}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={24}
+}
+
+@article{khan2023dataset,
+  title={Dataset Standardization for Effective Solar Power Forecasting: A Comprehensive Analysis},
+  year={2023},
+  citation={한국차세대컴퓨팅학회 학술대회, 110-113, 2023},
+  author={Zulfiqar Ahmad Khan and Waseem Ullah and Hikmat Yar and Noman Khan and Min Je Kim and Sung Wook Baik},
+  journal={한국차세대컴퓨팅학회 학술대회},
+  pages={110-113},
+  abstract={This paper introduces a comprehensive approach to dataset standardization aimed at enhancing the effectiveness and reliability of solar power forecasting models. Leveraging multiple datasets, this study incorporates additional attributes such as atmospheric pressure and sunshine duration. These enrichments bridge critical gaps in meteorological and environmental data, facilitating more robust and precise solar power forecasting. The paper underscores the significance of these attributes, furnishes detailed equations for their computation, and presents the outcomes of their integration. It underscores their pivotal role in enabling solar energy stakeholders to make informed decisions and optimize energy production effectively.}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={45}
+}
+
+@article{khan2023comparative,
+  title={Comparative Analysis of Solar Power Generation Forecasting Models for Identical Latitude Countries Data},
+  year={2023},
+  citation={한국차세대컴퓨팅학회 학술대회, 292-295, 2023},
+  author={Noman Khan and Waseem Ullah and Zulfiqar Ahmad Khan and Adnan Hussain and Min Je Kim and Sang Il Yoon and Sung Wook Baik},
+  journal={한국차세대컴퓨팅학회 학술대회},
+  pages={292-295},
+  abstract={I. INTRODUCTION A demanding problem in the research for sustainable and dependable energy sources is the effective integration of solar-based electricity generation into the electrical grids. Prediction of solar power production is crucial since it helps to manage the grid optimally and decreases the reliance on traditional energy sources [1]. The goal of the research challenges discussed in this study is to increase predictions for solar power generation, especially in areas with comparable geographic characteristics, like Italy and Bulgaria. Due to the rising significance of solar energy and the requirement for accurate forecasting in order to fully utilize its potential, this issue is extremely pertinent to the whole global population. It is a fascinating and challenging problem to solve since it is difficult to make reliable forecasts despite slight differences in local weather patterns. Forecasting solar power generation has significantly advanced in recent years, both in terms of methodologies and algorithms. Numerous kinds of forecasting algorithms, such as statistical methods [2], machine learning algorithms [3], and deep learning models [4], have been studied by researchers. Because deep learning models can capture complex temporal correlations in time-series data, which is necessary for reliable forecasts of solar power, the literature demonstrates a definite trend toward their use [5]. CNN, RNN, LSTM, and GRU are some of these models that have gained popularity and shown promising outcomes in a variety of applications.The need to increase the precision of solar power generation estimation in two countries with comparable latitudes, such as Italy …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={54}
+}
+
+@article{khan2023,
+  title={항공 장면에서의 효율적인 차량 감지},
+  year={2023},
+  citation={한국차세대컴퓨팅학회 학술대회, 104-107, 2023},
+  author={Habib Khan and Zulfiqar Ahmad Khan and Waseem Ullah and Min Jee Kim and Mi Young Lee and Sung Wook Baik},
+  journal={한국차세대컴퓨팅학회 학술대회},
+  pages={104-107},
+  abstract={Accurate detection of small targets in aerial images is crucial but challenging due to the limited computational resources of UAVs. This paper presents an efficient approach based on YOLO-V5S for detecting and classifying distant vehicles in aerial scenes. Extensive ablation study is conducted to find the optimal YOLO architecture. The proposed method is efficient and effective, making it applicable for real-time deployment. A dataset of 1000 annotated images are developed to validate the proposed method's effectiveness. The proposed network outperforms existing state-of-the-art methods in accuracy, speed, and resource efficiency, making it a promising solution for aerial vision-based applications.}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={24}
+}
+
+@article{hussain2022research,
+  title={Research Article A Hybrid Deep Learning-Based Network for Photovoltaic Power Forecasting},
+  year={2022},
+  citation={},
+  author={Altaf Hussain and Zulfiqar Ahmad Khan and Tanveer Hussain and Fath U Min Ullah and Seungmin Rho and Sung Wook Baik},
+  abstract={For efficient energy distribution, microgrids (MG) provide significant assistance to main grids and act as a bridge between the power generation and consumption. Renewable energy generation resources, particularly photovoltaics (PVs), are considered as a clean source of energy but are highly complex, volatile, and intermittent in nature making their forecasting challenging. us, a reliable, optimized, and a robust forecasting method deployed at MG objectifies these challenges by providing accurate renewable energy production forecasting and establishing a precise power generation and consumption matching at MG. Furthermore, it ensures effective planning, operation, and acquisition from the main grid in the case of superior or inferior amounts of energy, respectively. erefore, in this work, we develop an end-to-end hybrid network for automatic PV power forecasting, comprising three basic steps. Firstly, data preprocessing is performed to normalize, remove the outliers, and deal with the missing values prominently. Next, the temporal features are extracted using deep sequential modelling schemes, followed by the extraction of spatial features via convolutional neural networks. ese features are then fed to fully connected layers for optimal PV power forecasting. In the third step, the proposed model is evaluated on publicly available PV power generation datasets, where its performance reveals lower error rates when compared to state-of-the-art methods.}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={44}
+}
+
+@article{khan2022the,
+  title={THE ROLE OF RECREATIONAL ENGAGEMENT IN SHAPING HEALTHY LIFESTYLES AMONG YOUTH: A PERCEPTUAL STUDY},
+  year={2022},
+  citation={GLOBAL SOCIOLOGICAL REVIEW Учредители: Humanity Only-HO 7, 291-298, 2022},
+  author={SHR KHAN and KH MUHAMMAD and Z KHAN},
+  journal={GLOBAL SOCIOLOGICAL REVIEW Учредители: Humanity Only-HO},
+  volume={7},
+  pages={291-298},
+  abstract={The primary objective of this research was to examine the effects of leisure time on youth. Government Girls Colleges KP participated in the survey, along with 152 instructors, 1,890 students, and 149526 parents. 20% of the total 25 districts were selected at random from the population. These districts are Swabi, Peshawar, Kohat, Lakki Marwat, and DI Khan. All of the participants in this study were required to fill out a self-made form. Inferential statistics, percentages & descriptive statistics were employed. Based on the findings, the researchers concluded that people, particularly children, develop a highly favourable impression of the value of recreation in their lives. Everyone who took the survey, including parents, students, and educators, agreed that playing sports and other forms of physical activity are essential to a long and healthy life. The researcher offers some excellent recommendations that will improve life …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={76}
+}
+
+@article{khan2022the,
+  title={The Role of Recreational Engagement in Shaping Healthy},
+  year={2022},
+  citation={},
+  author={SR Khan and K Muhammad and Z Khan},
+  volume={7},
+  pages={291-298},
+  abstract={The primary objective of this research was to examine the effects of leisure time on youth. Government Girls Colleges KP participated in the survey, along with 152 instructors, 1,890 students, and 149526 parents. 20% of the total 25 districts were selected at random from the population. These districts are Swabi, Peshawar, Kohat, Lakki Marwat, and DI Khan. All of the participants in this study were required to fill out a self-made form. Inferential statistics, percentages & descriptive statistics were employed. Based on the findings, the researchers concluded that people, particularly children, develop a highly favourable impression of the value of recreation in their lives. Everyone who took the survey, including parents, students, and educators, agreed that playing sports and other forms of physical activity are essential to a long and healthy life. The researcher offers some excellent recommendations that will improve life and promote a healthy lifestyle based on the results.}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={40}
+}
+
+@article{hussain2021disasters,
+  title={Disasters Scenes Classification Based on Unmanned Aerial Vehicles Using Lightweight CNN},
+  year={2021},
+  citation={한국차세대컴퓨팅학회 학술대회, 193-196, 2021},
+  author={Altaf Hussain and Samee Ullah Khan and Fath U Min Ullah and Zulfiqar Ahmad Khan and Mi Young Lee and Sung Wook Baik},
+  journal={한국차세대컴퓨팅학회 학술대회},
+  pages={193-196},
+  abstract={Nowadays, due to natural disasters the world is facing huge challenges such as economical, climatic, and losses a lot of precious human life. The traditional emergency response and rescue teams are physically visit different affected areas for inspection and save human lives. In this manual monitoring system created various problems such as human resources, time-consuming, and in real-time unable to accurately analyze the nature of the disaster. Therefore, there is an urgent need for an automatic real-time system to intelligently identified different disaster scenes and analyze the affected areas for quick response. Therefore, in this paper, an Unmanned Aerial Vehicles (UAVs) inspired framework is proposed for disaster scenes classification using a lightweight Convolution Neural Network (CNN). To validate the strength of the proposed framework a comparative analysis is conducted to show its superiority …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={80}
+}
+
+
+@article{fayaznodategeoswin,
+  title={GeoSwin: Hierarchical Representation Learning and a Large-Scale Earth Observation Benchmark},
+  citation={},
+  author={Muhammad Fayaz and Zulfiqar Ahmad Khan and Lien Minh Dang and Hyeonjoon Moon},
+  abstract={Land Use and Land Cover (LULC) classification is essential for environmental monitoring, urban planning, and resource management. However, existing benchmarks are often limited in scale, category diversity, and long-tailed distributions, which restrict generalization to real-world remote sensing scenarios characterized by seasonal variations, heterogeneous landscapes, and severe class imbalance. We introduce GeoLULC, a large-scale benchmark consisting of 73,988 satellite images at  resolution across 73 land-cover categories. The dataset emphasizes fine-grained intra-class variability and explicitly includes rare and visually complex categories to reduce bias toward dominant classes and to better reflect real-world distributions. We further present GeoSwin, a transformer-based architecture tailored for LULC classification. GeoSwin adopts a Swin Transformer backbone to capture hierarchical local …}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={28}
+}
+
+@article{khannodateadvancements,
+  title={Advancements in Short-Term Renewable Energy Forecasting: A Comprehensive Review},
+  citation={},
+  author={Zulfiqar Ahmad Khan and Waseem Ullah and Noman Khan and Muhammad Munsif and Sang Il Yoon and Sung Wook Baik},
+  abstract={This comprehensive review critically examines the evolving landscape of short-term forecasting for renewable energy sources, with a specific emphasis on solar power. As the world grapples with environmental concerns and seeks sustainable energy solutions, accurate forecasting becomes essential for the effective integration and management of renewable energy resources. We explore a spectrum of forecasting methodologies, from traditional physical models to cutting-edge artificial intelligence (AI) techniques, assessing their strengths, limitations, and potential implications for the renewable energy sector. By providing a holistic view of the field's evolution, this review aims to offer insights for researchers, policymakers, and industry stakeholders to drive advancements in short-term renewable energy forecasting.}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={60}
+}
+
+@article{khan2023trapezoid,
+  title={A Trapezoid Attention Mechanism for Power Generation and Consumption Forecasting},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Ullah, Waseem and Baik, Sung Wook},
+  journal={IEEE Transactions on Industrial Informatics},
+  year={2023},
+  publisher={IEEE}
+}
+  
+  @article{khan2020towards,
+  title={Towards efficient electricity forecasting in residential and commercial buildings: A novel hybrid CNN with a LSTM-AE based framework},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Ullah, Amin and Rho, Seungmin and Lee, Miyoung and Baik, Sung Wook},
+  journal={Sensors},
+  volume={20},
+  number={5},
+  pages={1399},
+  year={2020},
+  publisher={MDPI}
+,
+  rank={Q1},
+  impactfactor={12.3},
+  citation_count={36}
+}
+
+@article{sajjad2020novel,
+  title={A novel CNN-GRU-based hybrid approach for short-term residential load forecasting},
+  author={Sajjad, Muhammad and Khan, Zulfiqar Ahmad and Ullah, Amin and Hussain, Tanveer and Ullah, Waseem and Lee, Mi Young and Baik, Sung Wook},
+  journal={Ieee Access},
+  volume={8},
+  pages={143759--143768},
+  year={2020},
+  publisher={IEEE}
+,
+  rank={Q1},
+  impactfactor={3.9},
+  citation_count={114}
+}
+
+@article{khan2020electrical,
+  title={Electrical energy prediction in residential buildings for short-term horizons using hybrid deep learning strategy},
+  author={Khan, Zulfiqar Ahmad and Ullah, Amin and Ullah, Waseem and Rho, Seungmin and Lee, Miyoung and Baik, Sung Wook},
+  journal={Applied Sciences},
+  volume={10},
+  number={23},
+  pages={8634},
+  year={2020},
+  publisher={MDPI}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={36}
+}
+
+@inproceedings{khan2020adaptive,
+  title={An Adaptive Filtering Technique for Segmentation of Tuberculosis in Microscopic Images},
+  author={Khan, Zulfiqar Ahmad and Ullah, Waseem and Ullah, Amin and Rho, Seungmin and Lee, Mi Young and Baik, Sung Wook},
+  booktitle={Proceedings of the 4th International Conference on Natural Language Processing and Information Retrieval},
+  pages={184--187},
+  year={2020}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={108}
+}
+
+@article{ullah2021efficient,
+  title={An efficient anomaly recognition framework using an attention residual LSTM in surveillance videos},
+  author={Ullah, Waseem and Ullah, Amin and Hussain, Tanveer and Khan, Zulfiqar Ahmad and Baik, Sung Wook},
+  journal={Sensors},
+  volume={21},
+  number={8},
+  pages={2811},
+  year={2021},
+  publisher={MDPI}
+,
+  rank={Q2},
+  impactfactor={3.9},
+  citation_count={40}
+}
+
+@article{yar2021towards,
+  title={Towards smart home automation using IoT-enabled edge-computing paradigm},
+  author={Yar, Hikmat and Imran, Ali Shariq and Khan, Zulfiqar Ahmad and Sajjad, Muhammad and Kastrati, Zenun},
+  journal={Sensors},
+  volume={21},
+  number={14},
+  pages={4932},
+  year={2021},
+  publisher={MDPI}
+,
+  rank={Q2},
+  impactfactor={3.9},
+  citation_count={90}
+}
+
+@article{khan2021atrous,
+  title={Atrous convolutions and residual GRU based architecture for matching power demand with supply},
+  author={Khan, Samee Ullah and Haq, Ijaz Ul and Khan, Zulfiqar Ahmad and Khan, Noman and Lee, Mi Young and Baik, Sung Wook},
+  journal={Sensors},
+  volume={21},
+  number={21},
+  pages={7191},
+  year={2021},
+  publisher={MDPI}
+,
+  rank={Q2},
+  impactfactor={3.9},
+  citation_count={80}
+}
+
+@article{khan2022boosting,
+  title={Boosting energy harvesting via deep learning-based renewable power generation prediction},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Baik, Sung Wook},
+  journal={Journal of King Saud University-Science},
+  volume={34},
+  number={3},
+  pages={101815},
+  year={2022},
+  publisher={Elsevier}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={48}
+}
+
+@article{khanraspberry,
+  title={Raspberry Pi Based Elderly Fall Detection System},
+  author={Khan, Zulfiqar Ahmad and Yar, Hikmat and Nasir, Mansoor}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={52}
+}
+
+@article{khan2022efficient,
+  title={Efficient short-term electricity load forecasting for effective energy management},
+  author={Khan, Zulfiqar Ahmad and Ullah, Amin and Haq, Ijaz Ul and Hamdy, Mohamed and Mauro, Gerardo Maria and Muhammad, Khan and Hijji, Mohammad and Baik, Sung Wook},
+  journal={Sustainable Energy Technologies and Assessments},
+  volume={53},
+  pages={102337},
+  year={2022},
+  publisher={Elsevier}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={56}
+}
+
+@article{ullah2022intelligent,
+  title={Intelligent dual stream CNN and echo state network for anomaly detection},
+  author={Ullah, Waseem and Hussain, Tanveer and Khan, Zulfiqar Ahmad and Haroon, Umair and Baik, Sung Wook},
+  journal={Knowledge-Based Systems},
+  volume={253},
+  pages={109456},
+  year={2022},
+  publisher={Elsevier}
+,
+  rank={Q1},
+  impactfactor={8.8},
+  citation_count={60}
+}
+
+@article{khan2022towards,
+  title={Towards efficient and effective renewable energy prediction via deep learning},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Haq, Ijaz Ul and Ullah, Fath U Min and Baik, Sung Wook},
+  journal={Energy Reports},
+  volume={8},
+  pages={10230--10243},
+  year={2022},
+  publisher={Elsevier}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={60}
+}
+
+@article{khan2022randomly,
+  title={Randomly initialized CNN with densely connected stacked autoencoder for efficient fire detection},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Ullah, Fath U Min and Gupta, Suneet Kumar and Lee, Mi Young and Baik, Sung Wook},
+  journal={Engineering Applications of Artificial Intelligence},
+  volume={116},
+  pages={105403},
+  year={2022},
+  publisher={Pergamon}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={40}
+}
+
+@article{yar2022optimized,
+  title={Optimized dual fire attention network and medium-scale fire classification benchmark},
+  author={Yar, Hikmat and Hussain, Tanveer and Agarwal, Mohit and Khan, Zulfiqar Ahmad and Gupta, Suneet Kumar and Baik, Sung Wook},
+  journal={IEEE Transactions on Image Processing},
+  volume={31},
+  pages={6331--6343},
+  year={2022},
+  publisher={IEEE}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={64}
+}
+
+@article{khan2023dual,
+  title={Dual stream network with attention mechanism for photovoltaic power forecasting},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Baik, Sung Wook},
+  journal={Applied Energy},
+  volume={338},
+  pages={120916},
+  year={2023},
+  publisher={Elsevier}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={24}
+}
+
+@article{khan2023modelling,
+  title={Modelling electricity consumption during the COVID19 pandemic: datasets, models, results and a research agenda},
+  author={Khan, Zulfiqar Ahmad and Hussain, Tanveer and Ullah, Amin and Ullah, Waseem and Del Ser, Javier and Muhammad, Khan and Sajjad, Muhammad and Baik, Sung Wook},
+  journal={Energy and Buildings},
+  pages={113204},
+  year={2023},
+  publisher={Elsevier}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={48}
+}
+
+@article{khan2024deep,
+  title={Deep multi-scale pyramidal features network for supervised video summarization},
+  author={Khan, Habib and Hussain, Tanveer and Khan, Samee Ullah and Khan, Zulfiqar Ahmad and Baik, Sung Wook},
+  journal={Expert Systems with Applications},
+  volume={237},
+  pages={121288},
+  year={2024},
+  publisher={Pergamon}
+,
+  rank={Q1},
+  impactfactor={8.5},
+  citation_count={16}
+}
+
+@article{yar2023effective,
+  title={An Effective Attention-based CNN Model for Fire Detection in Adverse Weather Conditions},
+  author={Yar, Hikmat and Ullah, Waseem and Khan, Zulfiqar Ahmad and Baik, Sung Wook},
+  journal={ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume={206},
+  pages={335--346},
+  year={2023},
+  publisher={Elsevier}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={33}
+}
+
+@article{khan2024dspm,
+  title={DSPM: Dual sequence prediction model for efficient energy management in micro-grid},
+  author={Khan, Zulfiqar Ahmad and Khan, Shabbir Ahmad and Hussain, Tanveer and Baik, Sung Wook},
+  journal={Applied Energy},
+  volume={356},
+  pages={122339},
+  year={2024},
+  publisher={Elsevier}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={26}
+}
+
+@article{khanefficient,
+  title={An Efficient Method for Vehicle Detection in Aerial Scenes},
+  author={Khan, Habib and Kim, Min Jee and Khan, Zulfiqar Ahmad and Lee, Mi Young and Ullah, Waseem and Baik, Sung Wook}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={56}
+}
+
+@article{yar2023modified,
+  title={A modified YOLOv5 architecture for efficient fire detection in smart cities},
+  author={Yar, Hikmat and Khan, Zulfiqar Ahmad and Ullah, Fath U Min and Ullah, Waseem and Baik, Sung Wook},
+  journal={Expert Systems with Applications},
+  volume={231},
+  pages={120465},
+  year={2023},
+  publisher={Elsevier}
+,
+  rank={Q1},
+  impactfactor={8.5},
+  citation_count={18}
+}
+
+@article{ullah2023sequential,
+  title={Sequential attention mechanism for weakly supervised video anomaly detection},
+  author={Ullah, Waseem and Ullah, Fath U Min and Khan, Zulfiqar Ahmad and Baik, Sung Wook},
+  journal={Expert Systems with Applications},
+  volume={230},
+  pages={120599},
+  year={2023},
+  publisher={Pergamon}
+,
+  rank={Q1},
+  impactfactor={8.5},
+  citation_count={57}
+}
+
+@article{hussain2022hybrid,
+  title={A hybrid deep learning-based network for photovoltaic power forecasting},
+  author={Hussain, Altaf and Khan, Zulfiqar Ahmad and Hussain, Tanveer and Ullah, Fath U Min and Rho, Seungmin and Baik, Sung Wook and others},
+  journal={Complexity},
+  volume={2022},
+  year={2022},
+  publisher={Hindawi}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={20}
+}
+
+
+
+@article{yar2024efficient,
+  title={An efficient deep learning architecture for effective fire detection in smart surveillance},
+  author={Yar, Hikmat and Khan, Zulfiqar Ahmad and Rida, Imad and Ullah, Waseem and Kim, Min Je and Baik, Sung Wook},
+  journal={Image and Vision Computing},
+  volume={145},
+  pages={104989},
+  year={2024},
+  publisher={Elsevier}
+,
+  rank={Q1},
+  impactfactor={4.5},
+  citation_count={12}
+}
+
+@article{yar2024modified,
+  title={A modified vision transformer architecture with scratch learning capabilities for effective fire detection},
+  author={Yar, Hikmat and Khan, Zulfiqar Ahmad and Hussain, Tanveer and Baik, Sung Wook},
+  journal={Expert Systems with Applications},
+  pages={123935},
+  year={2024},
+  publisher={Elsevier}
+,
+  rank={Q1},
+  impactfactor={8.5},
+  citation_count={12}
+}*/`;
+
+  // Split the text into individual publications
+  const publications = publicationsText.split('\n\n');
+
+  // Create a dictionary to store publications by year
+  const publicationsByYear = {};
+
+  // Iterate over each publication
+  publications.forEach(publication => {
+    // Extract year from each publication
+    const yearMatch = publication.match(/year={([^}]*)}/);
+    if (yearMatch) {
+      const year = parseInt(yearMatch[1]);
+      // Add publication to the respective year array in the dictionary
+      if (!publicationsByYear[year]) {
+        publicationsByYear[year] = [];
+      }
+      publicationsByYear[year].push(publication);
+    }
+  });
+
+  const publicationList = document.getElementById('publication-list');
+
+  // Iterate over publications by year and display them
+  Object.keys(publicationsByYear).sort((a, b) => b - a).forEach(year => {
+    // Create header for each year
+    const yearHeader = document.createElement('div');
+    yearHeader.classList.add('year-header');
+    yearHeader.textContent = year;
+    publicationList.appendChild(yearHeader);
+
+    // Iterate over publications for the current year
+    publicationsByYear[year].forEach(publication => {
+      // Extract information from the publication
+      const titleMatch = publication.match(/title={([^}]*)}/);
+      const authorMatch = publication.match(/author={([^}]*)}/);
+      const volumeMatch = publication.match(/volume={([^}]*)}/);
+      const publisherMatch = publication.match(/publisher={([^}]*)}/);
+      const journalMatch = publication.match(/journal={([^}]*)}/);
+      
+      const citationMatch = publication.match(/citation={([^}]*)}/);
+      const citationCountMatch = publication.match(/citation_count={([^}]*)}/i);
+      const rankMatch = publication.match(/rank={([^}]*)}/i);
+      const ifMatch = publication.match(/impactfactor={([^}]*)}/i);
+
+      if (titleMatch && authorMatch) {
+        const title = titleMatch[1];
+        let authors = authorMatch[1].split(' and ').map(author => {
+          const parts = author.split(',');
+          if (parts.length > 1) {
+            const [lastName, firstName] = parts.map(name => name.trim());
+            return `${firstName} ${lastName}`;
+          }
+          return author.trim();
+        }).join(', ');
+        
+        // Highlight Zulfiqar Ahmad Khan
+        authors = authors.replace(/(Zulfiqar Ahmad Khan|Zulfiqar Khan|Z\.?\s*Khan|Zulfiqar A\.? Khan)/gi, '<span style="color: #4facfe;">$1</span>');
+        
+        let journal = journalMatch ? journalMatch[1] : '';
+        const volume = volumeMatch ? volumeMatch[1] : '';
+        const publisher = publisherMatch ? publisherMatch[1] : '';
+        
+        // Fix Mojibake/Korean characters
+        if (/[^\x00-\x7F]/.test(journal)) {
+            journal = 'Korean Local Journal';
+        }
+        
+        // Extract URL or DOI if present
+        const urlMatch = publication.match(/url={([^}]*)}/);
+        const doiMatch = publication.match(/doi={([^}]*)}/);
+        
+        let link = "";
+        if (urlMatch) {
+            link = urlMatch[1];
+        } else if (doiMatch) {
+            link = "https://doi.org/" + doiMatch[1];
+        } else {
+            link = `https://scholar.google.com/scholar?q=${encodeURIComponent(title)}`;
+        }
+
+        let extraInfo = [];
+        if (volume) extraInfo.push(`Volume: ${volume}`);
+        if (publisher) extraInfo.push(`Publisher: ${publisher}`);
+        if (journal) extraInfo.push(`Journal: ${journal}`);
+
+        let citationText = citationMatch ? citationMatch[1] : '';
+        let citationCount = citationCountMatch ? citationCountMatch[1] : '';
+        let rankText = rankMatch ? rankMatch[1] : '';
+        let ifText = ifMatch ? ifMatch[1] : '';
+
+        let citationHtml = '';
+        if (citationText) {
+            citationHtml = `<div style="font-size: 15px; font-style: italic; margin-bottom: 6px; color: #e0e0e0;">${citationText}</div>`;
+        }
+
+        // Create list item for the publication
+        const listItem = document.createElement('li');
+        listItem.style.marginBottom = '25px';
+        listItem.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
+            <div style="flex: 1;">
+                <a href="${link}" target="_blank" style="color: #00f2fe; text-decoration: none; display: block; font-size: 18px; margin-bottom: 4px; font-weight: 700; transition: color 0.2s;" onmouseover="this.style.color='#fff';" onmouseout="this.style.color='#00f2fe';">${title}</a>
+                ${citationHtml}
+                <div style="margin-bottom: 6px; font-size: 15px;">Authors: ${authors}</div>
+                <div style="opacity: 0.8; font-size: 14px;">${extraInfo.join('<br>')}</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; min-width: 80px; padding-top: 5px;">
+                ${citationCount && citationCount !== "0" ? `
+                <div style="text-align: center; margin-bottom: 8px;">
+                    <div style="font-size: 11px; font-weight: 600; color: #00f2fe; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Citations</div>
+                    <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(0,242,254,0.15); border: 2px solid rgba(0,242,254,0.8); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: #fff; margin: 0 auto; box-shadow: 0 0 10px rgba(0,242,254,0.4);" title="Citations">
+                        ${citationCount}
+                    </div>
+                </div>` : ''}
+                <div style="display: flex; flex-direction: column; gap: 5px; width: 100%; align-items: center;">
+                    ${rankText ? `<span style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); font-size: 11px; padding: 3px 6px; border-radius: 4px; font-weight: 600; color: #e0e0e0; width: 100%; text-align: center; letter-spacing: 0.5px;">Rank: ${rankText}</span>` : ''}
+                    ${ifText ? `<span style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); font-size: 11px; padding: 3px 6px; border-radius: 4px; font-weight: 600; color: #e0e0e0; width: 100%; text-align: center; letter-spacing: 0.5px;">IF: ${ifText}</span>` : ''}
+                </div>
+            </div>
+        </div>`;
+
+        // Append list item to the publication list
+        publicationList.appendChild(listItem);
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
+
+
+
