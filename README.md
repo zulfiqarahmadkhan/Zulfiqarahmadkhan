@@ -25,30 +25,27 @@ A sleek, responsive, and dynamic personal portfolio website designed specificall
 4. Replace the social links (LinkedIn, GitHub, Google Scholar, ResearchGate) with your own URLs.
 5. Replace `assets/images/profile.jpg` with your own headshot.
 
-### 2. Updating Your Publications
-The Publications page is driven entirely by BibTeX. You do **not** need to manually format HTML for each paper.
+### 2. Adding Custom Badges (Impact Factor & Rank)
+While the automated script (see below) will automatically pull all your papers and citation counts from Google Scholar, Google Scholar *does not* track Journal Quartiles (Q1/Q2) or Impact Factors. 
+
+If you want these beautiful cyan badges to appear next to your papers, you just need to add them manually:
 
 1. Open `publications.html`.
-2. Scroll to the bottom where you see ``const publicationsText = `/* ... */`; ``.
-3. Paste your BibTeX entries between the `/*` and `*/`.
-4. **To add metrics**: Inside your BibTeX entry, manually add the following fields:
-   - `rank={Q1}`
-   - `impactfactor={8.5}`
-   - `citation_count={42}`
-   
-   *Example:*
-   ```bibtex
-   @article{example2025,
-     title={An Example Paper Title},
-     author={Your Name and Co-Author},
-     journal={IEEE Access},
-     year={2025},
-     rank={Q1},
-     impactfactor={3.9},
-     citation_count={15}
-   }
-   ```
-   The website will automatically read these fields and generate beautiful cyan badges on the page!
+2. Scroll to the bottom where you see your BibTeX entries.
+3. Inside the BibTeX block for a specific paper, manually type the `rank` and `impactfactor` fields.
+
+*Example:*
+```bibtex
+@article{example2025,
+  title={An Example Paper Title},
+  journal={IEEE Access},
+  year={2025},
+  citation_count={15},
+  rank={Q1},
+  impactfactor={3.9}
+}
+```
+The website will automatically read these fields and generate the badges! The automated GitHub script is smart enough to preserve these manual badges forever, even when updating citations.
 
 ### 3. Fully Automated Google Scholar Sync
 This portfolio is equipped with a built-in GitHub Action that completely automates your publication updates. Every Sunday at midnight, it will seamlessly fetch your real-time data from Google Scholar.
