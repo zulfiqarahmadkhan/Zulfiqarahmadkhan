@@ -129,7 +129,7 @@ def main():
         i10index = author.get('i10index', 0)
         
         if citations or hindex or i10index:
-            for filepath in ['publications.html']: # you mentioned it's on publications now!
+            for filepath in ['index.html', 'publications.html']:
                 with open(filepath, 'r', encoding='utf-8') as f:
                     file_content = f.read()
                 
